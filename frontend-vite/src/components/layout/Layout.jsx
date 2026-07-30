@@ -7,8 +7,9 @@ import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard, CalendarDays, Building2, User,
-  Menu, X, Bell, LogOut, ChevronDown, TennisBall,
+  Menu, X, Bell, LogOut, ChevronDown,
 } from 'lucide-react';
+import { TennisBallIcon } from '../ui/TennisBallIcon';
 import { useCourtFlow } from '../../context/CourtFlowContext';
 import { Badge } from '../ui/Badge';
 
@@ -22,7 +23,7 @@ const playerLinks = [
 const ownerLinks = [
   { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
   { to: '/clubs', icon: Building2, label: 'My Clubs' },
-  { to: '/courts', icon: TennisBall, label: 'Courts' },
+  { to: '/courts', icon: TennisBallIcon, label: 'Courts' },
   { to: '/bookings', icon: CalendarDays, label: 'Bookings' },
   { to: '/profile', icon: User, label: 'Profile' },
 ];
@@ -56,7 +57,7 @@ export const Layout = ({ children }) => {
             <Menu size={24} />
           </button>
           <Link to="/" className="flex items-center gap-2">
-            <TennisBall className="text-amber-500" size={24} />
+            <TennisBallIcon className="text-amber-500" size={24} />
             <span className="font-bold text-lg">CourtFlow</span>
           </Link>
           <div className="w-10" />
@@ -79,7 +80,7 @@ export const Layout = ({ children }) => {
       >
         <div className="flex items-center justify-between px-6 h-16 border-b border-gray-700/50">
           <Link to="/" className="flex items-center gap-2">
-            <TennisBall className="text-amber-500" size={28} />
+            <TennisBallIcon className="text-amber-500" size={28} />
             <span className="font-bold text-xl">CourtFlow</span>
           </Link>
           <button onClick={() => setSidebarOpen(false)} className="lg:hidden p-1 text-gray-400">

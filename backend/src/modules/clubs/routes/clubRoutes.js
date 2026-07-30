@@ -6,6 +6,7 @@ const express = require('express');
 const router = express.Router();
 
 const clubController = require('../controllers/clubController');
+const courtController = require('../../courts/controllers/courtController');
 const authenticate = require('../../../middleware/authenticate');
 const { authorize } = require('../../../middleware/authorize');
 const { validate } = require('../../../middleware/validate');
@@ -15,6 +16,11 @@ const {
   updateClubSchema,
   clubIdParamSchema,
 } = require('../validators/clubValidators');
+const courtValidators = require('../../courts/validators/courtValidators');
+const courtClubIdParamSchema = courtValidators.clubIdParamSchema;
+const createCourtSchema = courtValidators.createCourtSchema;
+const updateCourtSchema = courtValidators.updateCourtSchema;
+const courtIdParamSchema = courtValidators.courtIdParamSchema;
 
 // ─── Public Routes ─────────────────────────────────────
 
@@ -61,6 +67,28 @@ router.get(
   authenticate,
   validate(clubIdParamSchema),
   clubController.getClubStats
+);
+
+// ─── Court Routes (sub-resource of clubs) ────────────
+// Map req.params.id to req.params.clubId for court sub-routes
+
+// List courts for a club
+router.get('/:id/courts', (req, _res, next) => {
+  req.params.clubId = req.params.id;
+  next();
+}, courtController.listCourts);
+
+// Create court in a club
+router.post(
+  '/:id/courts',
+  authenticate,
+  authorize(ROLES.CLUB_OWNER, ROLES.SUPER_ADMIN),
+  (req, _res, next) => {
+    req.params.clubId = req.params.id;
+    next();
+  },
+  validate(createCourtSchema),
+  courtController.createCourt
 );
 
 module.exports = router;

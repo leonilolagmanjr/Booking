@@ -6,8 +6,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import {
   MapPin, Phone, Mail, Clock, Plus, Edit2, Trash2,
-  ArrowLeft, TennisBall,
+  ArrowLeft, Building2,
 } from 'lucide-react';
+import { TennisBallIcon } from '../../components/ui/TennisBallIcon';
 import { clubsApi, courtsApi } from '../../services/courtflowApi';
 import { Card, CardBody, CardHeader } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
@@ -187,7 +188,7 @@ export const ClubDetail = () => {
                 <Link key={court._id} to={`/courts/${court._id}`}>
                   <div className="flex items-center justify-between p-4 rounded-xl bg-gray-900/50 hover:bg-gray-900 transition-colors">
                     <div className="flex items-center gap-3">
-                      <TennisBall className="text-amber-500" size={20} />
+                      <TennisBallIcon className="text-amber-500" size={20} />
                       <div>
                         <p className="font-medium text-white">{court.name}</p>
                         <p className="text-xs text-gray-400 capitalize">{court.surface}</p>
@@ -232,7 +233,4 @@ export const ClubDetail = () => {
     </div>
   );
 };
-
-// Fix missing import
-import { Building2 } from 'lucide-react';
 

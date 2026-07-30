@@ -4,7 +4,8 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { TennisBall, Mail, ArrowLeft } from 'lucide-react';
+import { Mail, ArrowLeft } from 'lucide-react';
+import { TennisBallIcon } from '../../components/ui/TennisBallIcon';
 import { authApi } from '../../services/courtflowApi';
 import { Button } from '../../components/ui/Button';
 import { Input } from '../../components/ui/Input';
@@ -35,7 +36,7 @@ export const ForgotPasswordPage = () => {
     return (
       <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
         <div className="w-full max-w-md text-center">
-          <TennisBall className="text-amber-500 mx-auto mb-4" size={48} />
+          <TennisBallIcon className="text-amber-500 mx-auto mb-4" size={48} />
           <h1 className="text-2xl font-bold text-white mb-2">Check Your Email</h1>
           <p className="text-gray-400 mb-6">
             If an account exists with {email}, we've sent a password reset link.
@@ -44,6 +45,7 @@ export const ForgotPasswordPage = () => {
             <Button variant="outline">Back to Sign In</Button>
           </Link>
         </div>
+      </div>
     );
   }
 
@@ -51,7 +53,7 @@ export const ForgotPasswordPage = () => {
     <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <TennisBall className="text-amber-500 mx-auto" size={40} />
+          <TennisBallIcon className="text-amber-500 mx-auto" size={40} />
           <h1 className="text-2xl font-bold text-white mt-4">Reset Password</h1>
           <p className="text-gray-400 mt-2">Enter your email and we'll send you a reset link</p>
         </div>
@@ -79,6 +81,7 @@ export const ForgotPasswordPage = () => {
             <ArrowLeft size={14} /> Back to Sign In
           </Link>
         </div>
+      </div>
     </div>
   );
 };

@@ -4,7 +4,8 @@
 
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { TennisBall, Mail, Lock, UserPlus, Eye, EyeOff } from 'lucide-react';
+import { Mail, Lock, UserPlus, Eye, EyeOff } from 'lucide-react';
+import { TennisBallIcon } from '../../components/ui/TennisBallIcon';
 import { authApi } from '../../services/courtflowApi';
 import { useCourtFlow } from '../../context/CourtFlowContext';
 import { Button } from '../../components/ui/Button';
@@ -54,7 +55,7 @@ export const LoginPage = () => {
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <TennisBall className="text-amber-500" size={40} />
+            <TennisBallIcon className="text-amber-500" size={40} />
             <span className="text-3xl font-bold text-white">CourtFlow</span>
           </div>
           <p className="text-gray-400">
