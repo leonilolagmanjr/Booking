@@ -18,6 +18,7 @@ import VideoManager from './pages/VideoManager';
 import SocialMedia from './pages/SocialMedia';
 import Forum from './pages/Forum.jsx';
 import ForumCategory from './pages/ForumCategory.jsx';
+import { AppCourtFlow } from './AppCourtFlow';
 
 const App = () => {
   const { isLoggedIn } = useAuth();
@@ -28,6 +29,7 @@ const App = () => {
         <Navbar />
         <div>
           <Routes>
+            {/* Legacy routes */}
             <Route path="/" element={<Home />} />
             <Route path="/jobs" element={<ReadJob />} />
             <Route path="/auth" element={<Auth />} />
@@ -43,6 +45,9 @@ const App = () => {
             <Route path="/social" element={<SocialMedia />} />
             <Route path="/forum" element={<Forum />} />
             <Route path="/forum/:groupId" element={<ForumCategory />} />
+
+            {/* CourtFlow routes */}
+            <Route path="/cf/*" element={<AppCourtFlow />} />
           </Routes>
         </div>
         <ChatWidget />

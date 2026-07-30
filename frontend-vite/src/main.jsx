@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { AuthProvider } from './context/AuthContext';
 import { FriendProvider } from './context/FriendContext';
 import { NotificationProvider } from './context/NotificationContext';
+import { CourtFlowProvider } from './context/CourtFlowContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +14,9 @@ root.render(
     <AuthProvider>
       <FriendProvider>
         <NotificationProvider>
-          <App />
+          <CourtFlowProvider>
+            <App />
+          </CourtFlowProvider>
         </NotificationProvider>
       </FriendProvider>
     </AuthProvider>

@@ -1,6 +1,4 @@
-# Changelog
 
-## [0.5.0] — 2025-05-20
 
 ### Added
 - **Dashboard Module** — Owner and player dashboards:
