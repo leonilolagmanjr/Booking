@@ -46,16 +46,15 @@ app.get('/health', (req, res) => {
 });
 
 // ─── API Routes ────────────────────────────────────────
-// Will be registered as modules are built
-// app.use('/api/auth', require('./modules/auth/routes'));
-// app.use('/api/users', require('./modules/users/routes'));
-// app.use('/api/clubs', require('./modules/clubs/routes'));
-// app.use('/api/courts', require('./modules/courts/routes'));
-// app.use('/api/bookings', require('./modules/bookings/routes'));
-// app.use('/api/payments', require('./modules/payments/routes'));
-// app.use('/api/notifications', require('./modules/notifications/routes'));
-// app.use('/api/admin', require('./modules/admin/routes'));
-// app.use('/api/dashboard', require('./modules/dashboard/routes'));
+app.use('/api/auth', require('./modules/auth/routes/authRoutes'));
+app.use('/api/users', require('./modules/users/routes/userRoutes'));
+app.use('/api/clubs', require('./modules/clubs/routes/clubRoutes'));
+app.use('/api/courts', require('./modules/courts/routes/courtRoutes'));
+app.use('/api/bookings', require('./modules/bookings/routes/bookingRoutes'));
+app.use('/api/payments', require('./modules/payments/routes/paymentRoutes'));
+app.use('/api/notifications', require('./modules/notifications/routes/notificationRoutes'));
+app.use('/api/admin', require('./modules/admin/routes/adminRoutes'));
+app.use('/api/dashboard', require('./modules/dashboard/routes/dashboardRoutes'));
 
 // ─── Error Handler (must be last) ──────────────────────
 app.use(errorHandler);
