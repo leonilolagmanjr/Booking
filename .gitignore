@@ -1,0 +1,11 @@
+TODO.md
+/backend/uploads
+/backend/node_modules
+
+/frontend/node_modules
+
+frontend/.env
+backend/.env
+.claude/settings.local.json
+/backup
+backend/scripts/__pycache__/generate.cpython-314.pyc
