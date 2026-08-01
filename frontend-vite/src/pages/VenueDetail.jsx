@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import {
-  MapPin, Phone, Mail, Clock, Star, Building2,
+  MapPin, Phone, Mail, Star, Building2,
   ArrowLeft, ChevronRight, CalendarDays, Users, Shield,
-  CheckCircle, XCircle,
+  CheckCircle,
 } from 'lucide-react';
 import { venueService } from '../api/venueService';
 import { formatCurrency } from '../utils/format';

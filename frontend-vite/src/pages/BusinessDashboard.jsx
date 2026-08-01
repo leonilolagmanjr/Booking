@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   CalendarDays, Users, DollarSign, Activity,
-  Clock, ChevronRight, Plus, TrendingUp,
+  Clock, ChevronRight, Plus,
 } from 'lucide-react';
 import { dashboardService } from '../api/dashboardService';
 import { formatCurrency, formatTime } from '../utils/format';

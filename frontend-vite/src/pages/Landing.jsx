@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   Search, Building2, CalendarDays, Clock, Shield,
-  Star, ChevronRight, ArrowRight, CheckCircle, Users,
-  MapPin, TennisBall,
+  Star, ChevronRight, ArrowRight, CheckCircle,
+  MapPin, Volleyball,
 } from 'lucide-react';
 
 const features = [
@@ -30,12 +30,12 @@ const features = [
 ];
 
 const sports = [
-  { name: 'Pickleball', icon: TennisBall, count: '24 venues' },
-  { name: 'Tennis', icon: TennisBall, count: '18 venues' },
-  { name: 'Basketball', icon: TennisBall, count: '12 venues' },
-  { name: 'Badminton', icon: TennisBall, count: '15 venues' },
-  { name: 'Volleyball', icon: TennisBall, count: '8 venues' },
-  { name: 'Squash', icon: TennisBall, count: '6 venues' },
+  { name: 'Pickleball', icon: Volleyball, count: '24 venues' },
+  { name: 'Tennis', icon: Volleyball, count: '18 venues' },
+  { name: 'Basketball', icon: Volleyball, count: '12 venues' },
+  { name: 'Badminton', icon: Volleyball, count: '15 venues' },
+  { name: 'Volleyball', icon: Volleyball, count: '8 venues' },
+  { name: 'Squash', icon: Volleyball, count: '6 venues' },
 ];
 
 const steps = [

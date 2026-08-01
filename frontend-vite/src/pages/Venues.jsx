@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { Search, MapPin, Star, Building2, SlidersHorizontal, ChevronDown, X } from 'lucide-react';
+import { Search, MapPin, Star, Building2, SlidersHorizontal, X } from 'lucide-react';
 import { venueService } from '../api/venueService';
 import { cn } from '../utils/cn';
 

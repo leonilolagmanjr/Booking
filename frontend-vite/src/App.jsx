@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { useCourtFlow } from './context/CourtFlowContext';
 import { Layout } from './components/layout/Layout';
 import { Spinner } from './components/common/Spinner';

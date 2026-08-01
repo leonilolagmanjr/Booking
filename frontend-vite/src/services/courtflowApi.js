@@ -84,7 +84,7 @@ api.interceptors.response.use(
         localStorage.removeItem('cf_access_token');
         localStorage.removeItem('cf_refresh_token');
         localStorage.removeItem('cf_user');
-        window.location.href = '/auth';
+        window.location.href = '/login';
         return Promise.reject(refreshError);
       } finally {
         isRefreshing = false;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { CalendarDays, Clock, MapPin, XCircle, Building2, ChevronRight } from 'lucide-react';
+import { CalendarDays, Clock, XCircle, Building2, ChevronRight } from 'lucide-react';
 import { bookingService } from '../api/bookingService';
 import { formatCurrency, formatDate, formatTime } from '../utils/format';
 import { cn } from '../utils/cn';

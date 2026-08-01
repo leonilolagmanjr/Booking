@@ -3,7 +3,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { Bell, CheckCheck, Trash2, CalendarDays, CreditCard, AlertTriangle, X } from 'lucide-react';
+import { Bell, CheckCheck, Trash2, CalendarDays, CreditCard, AlertTriangle } from 'lucide-react';
 import { notificationsApi } from '../../services/courtflowApi';
 import { Card, CardBody, CardHeader } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';

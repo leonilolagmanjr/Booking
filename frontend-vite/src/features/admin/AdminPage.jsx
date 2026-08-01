@@ -3,7 +3,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { Users, Building2, BarChart3, Shield, Search, X } from 'lucide-react';
+import { Users, Building2, BarChart3, Search } from 'lucide-react';
 import { adminApi } from '../../services/courtflowApi';
 import { Card, CardBody, CardHeader } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';

@@ -41,7 +41,7 @@ export const ForgotPasswordPage = () => {
           <p className="text-gray-400 mb-6">
             If an account exists with {email}, we've sent a password reset link.
           </p>
-          <Link to="/auth">
+          <Link to="/login">
             <Button variant="outline">Back to Sign In</Button>
           </Link>
         </div>
@@ -77,7 +77,7 @@ export const ForgotPasswordPage = () => {
               Send Reset Link
             </Button>
           </form>
-          <Link to="/auth" className="flex items-center justify-center gap-2 mt-4 text-sm text-gray-400 hover:text-white">
+          <Link to="/login" className="flex items-center justify-center gap-2 mt-4 text-sm text-gray-400 hover:text-white">
             <ArrowLeft size={14} /> Back to Sign In
           </Link>
         </div>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate, Link } from 'react-router-dom';
 import {
-  ChevronLeft, ChevronRight, Clock, CalendarDays,
-  CheckCircle, CreditCard, MapPin, Building2, ArrowLeft,
+  ChevronRight, Clock, CalendarDays,
+  CheckCircle, CreditCard, MapPin, Building2,
 } from 'lucide-react';
 import { venueService } from '../api/venueService';
 import { courtService } from '../api/courtService';
